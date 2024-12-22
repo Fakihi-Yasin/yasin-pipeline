@@ -7,6 +7,7 @@ phases:
             - ls
             - echo "Running tests to check if "Congratulations" present in index.html file"
             - grep "Congratulations" index.html
+            - echo "Hello MernOps"
     post_build:
         commands:
             - echo "Post build phase"
