@@ -1,26 +1,49 @@
 version: 0.2
 
 phases: 
-  pre_build:
-    commands: 
-      - echo "Pre-build phase"
-      - pwd
-      - ls -la
-  build:
-    commands:
-      - echo "Build phase"
-      - echo "Hello MernOps"  # Changed from direct "Hello MernOps" to using echo
-      - if [ -f index.html ]; then grep "Congratulations" index.html || echo "Pattern not found"; fi
-  post_build:
-    commands:
-      - echo "Post-build phase"
-      - echo "Hello MernOps"
-
+    build:
+        commands:
+            - echo "Build block"
+            - ls
+            - echo "Running tests to check if "Congratulations" present in index.html file"
+            - grep "Congratulations" index.html
+    post_build:
+        commands:
+            - echo "Post build phase"
 artifacts:
-  files:
-    - scripts/install_dependencies
-    - scripts/start_server
-    - scripts/stop_server
-    - index.html
-    - appspec.yml
-  discard-paths: yes
+    files:
+        - scripts/install_dependencies
+        - scripts/start_server
+        - scripts/stop_server
+        - index.html
+        - appspec.yml
+    discard-paths: yes
+
+
+
+# version: 0.2
+
+# phases: 
+#   pre_build:
+#     commands: 
+#       - echo "Pre-build phase"
+#       - pwd
+#       - ls -la
+#   build:
+#     commands:
+#       - echo "Build phase"
+#       - echo "Hello MernOps"  # Changed from direct "Hello MernOps" to using echo
+#       - if [ -f index.html ]; then grep "Congratulations" index.html || echo "Pattern not found"; fi
+#   post_build:
+#     commands:
+#       - echo "Post-build phase"
+#       - echo "Hello MernOps"
+
+# artifacts:
+#   files:
+#     - scripts/install_dependencies
+#     - scripts/start_server
+#     - scripts/stop_server
+#     - index.html
+#     - appspec.yml
+#   discard-paths: yes
