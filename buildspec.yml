@@ -3,6 +3,6 @@ phases:
  build:
    commands:
      - echo "Building the application..."
-rtifacts:
+artifacts:
  files:
    - '**/*'
