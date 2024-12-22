@@ -1,8 +1,9 @@
-version: 0.0
-os: Linuxfiles:
+version: 0.2
+os: Linux
+files:
  - source: /
    destination: /home/ec2-user
-ooks:
+hooks:
  ApplicationStop:
    - location: scripts/stop_server.sh
      timeout: 300
