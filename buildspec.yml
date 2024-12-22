@@ -4,6 +4,7 @@ phases:
     build:
         commands:
             - echo "Hello MernOps"
+            - echo "Build phase starting"
             - echo "Build block"
             - ls
             - echo "Running tests to check if "Congratulations" present in index.html file"
