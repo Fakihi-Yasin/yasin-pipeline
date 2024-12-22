@@ -3,6 +3,7 @@ version: 0.2
 phases: 
     build:
         commands:
+            - echo "Hello MernOps"
             - echo "Build block"
             - ls
             - echo "Running tests to check if "Congratulations" present in index.html file"
